@@ -40,6 +40,10 @@ class handlingKeyboardViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         activeField = textField
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.goToNextTextField(textFieldArg: textField)
+        return true
+    }
     @objc func keyboardDidShow(notification:NSNotification) {
         if(activeField != nil){
             let additionalHeights = 0
