@@ -42,9 +42,6 @@ class handlingKeyboardViewController: UIViewController, UITextFieldDelegate {
     }
     @objc func keyboardDidShow(notification:NSNotification) {
         if(activeField != nil){
-            let screenRect = UIScreen.main.bounds
-            let screenHeight = screenRect.size.height
-            
             let additionalHeights = 0
             let heightTfldConstraint = 74 //teniendo en cuenta los espaciados
             let info = notification.userInfo
@@ -55,7 +52,7 @@ class handlingKeyboardViewController: UIViewController, UITextFieldDelegate {
             //height in subview to use when tesxtfields are in some stack or view inside the viewContainer
             let heightTextFieldInSubView = activeField!.superview!.frame.maxY + CGFloat(heightTfldConstraint)
             let heightVisible = heightOfView - (heightkeyboard + CGFloat(additionalHeights))
-            print("screenHeigh = \(screenHeight), heightView = \(heightOfView), heightKeyboard = \(heightkeyboard), heightTextFieldInSubView = \(heightTextFieldInSubView), heightTextField = \(heightTextField), heightVisible = \(heightVisible)")
+            print("heightView = \(heightOfView), heightKeyboard = \(heightkeyboard), heightTextFieldInSubView = \(heightTextFieldInSubView), heightTextField = \(heightTextField), heightVisible = \(heightVisible)")
             
             if activeField!.superview! != viewContainer {
                 //print("está en un stack view")
@@ -68,20 +65,6 @@ class handlingKeyboardViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    /*
-    @objc func keyboardDidShow(notification:NSNotification) {
-        if(activeField != nil){
-            let heightOfView:CGFloat = self.view.frame.size.height
-            let _:CGFloat = self.view.frame.maxY
-            let info = notification.userInfo
-            let rect:CGRect = info!["UIKeyboardFrameEndUserInfoKey"] as! CGRect
-            let rect2:CGFloat = (activeField?.frame.maxY)!
-            if (rect2+((rect.maxY-heightOfView)/2) >= rect.maxY - rect.minY){
-                viewContainer.transform = CGAffineTransform(translationX: 0, y: (-1*(rect.size.height) / 2) - 40)
-                self.Moved = true
-            }
-        }
-    }*/
     @objc func keyboardWillHide(notification:NSNotification    ) {
         if(activeField != nil){
             if((Moved && !IntroFields) || ((activeField?.tag)! == 8) ){
