@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A349D7A2291A70A0081A0FC /* Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A349D792291A70A0081A0FC /* Annotations.swift */; };
 		1AD084842290629600DEFFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD084832290629600DEFFFF /* AppDelegate.swift */; };
 		1AD084862290629600DEFFFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD084852290629600DEFFFF /* ViewController.swift */; };
 		1AD084892290629600DEFFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD084872290629600DEFFFF /* Main.storyboard */; };
@@ -14,6 +15,9 @@
 		1AD0848E2290629700DEFFFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD0848C2290629700DEFFFF /* LaunchScreen.storyboard */; };
 		1AD084992290629700DEFFFF /* Keyboard_validation_and_requestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD084982290629700DEFFFF /* Keyboard_validation_and_requestsTests.swift */; };
 		1AD084A42290629700DEFFFF /* Keyboard_validation_and_requestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD084A32290629700DEFFFF /* Keyboard_validation_and_requestsUITests.swift */; };
+		1AD084B52290661700DEFFFF /* generalProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD084B42290661700DEFFFF /* generalProperties.swift */; };
+		1AD084B72290671500DEFFFF /* ExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD084B62290671500DEFFFF /* ExtensionsViewController.swift */; };
+		1AD084B92290678E00DEFFFF /* handlingKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD084B82290678E00DEFFFF /* handlingKeyboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A349D792291A70A0081A0FC /* Annotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotations.swift; sourceTree = "<group>"; };
 		1AD084802290629600DEFFFF /* Keyboard_validation_and_requests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keyboard_validation_and_requests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD084832290629600DEFFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AD084852290629600DEFFFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,9 @@
 		1AD0849F2290629700DEFFFF /* Keyboard_validation_and_requestsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Keyboard_validation_and_requestsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD084A32290629700DEFFFF /* Keyboard_validation_and_requestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard_validation_and_requestsUITests.swift; sourceTree = "<group>"; };
 		1AD084A52290629700DEFFFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AD084B42290661700DEFFFF /* generalProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generalProperties.swift; sourceTree = "<group>"; };
+		1AD084B62290671500DEFFFF /* ExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsViewController.swift; sourceTree = "<group>"; };
+		1AD084B82290678E00DEFFFF /* handlingKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = handlingKeyboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,16 @@
 		1AD084822290629600DEFFFF /* Keyboard_validation_and_requests */ = {
 			isa = PBXGroup;
 			children = (
+				1AD084B3229062F800DEFFFF /* ExtensionsAndClases */,
+				1AD084B2229062D900DEFFFF /* Styles */,
+				1AD084B1229062B600DEFFFF /* Views */,
 				1AD084832290629600DEFFFF /* AppDelegate.swift */,
 				1AD084852290629600DEFFFF /* ViewController.swift */,
 				1AD084872290629600DEFFFF /* Main.storyboard */,
 				1AD0848A2290629700DEFFFF /* Assets.xcassets */,
 				1AD0848C2290629700DEFFFF /* LaunchScreen.storyboard */,
 				1AD0848F2290629700DEFFFF /* Info.plist */,
+				1A349D792291A70A0081A0FC /* Annotations.swift */,
 			);
 			path = Keyboard_validation_and_requests;
 			sourceTree = "<group>";
@@ -123,6 +135,30 @@
 				1AD084A52290629700DEFFFF /* Info.plist */,
 			);
 			path = Keyboard_validation_and_requestsUITests;
+			sourceTree = "<group>";
+		};
+		1AD084B1229062B600DEFFFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AD084B82290678E00DEFFFF /* handlingKeyboardViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1AD084B2229062D900DEFFFF /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				1AD084B42290661700DEFFFF /* generalProperties.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		1AD084B3229062F800DEFFFF /* ExtensionsAndClases */ = {
+			isa = PBXGroup;
+			children = (
+				1AD084B62290671500DEFFFF /* ExtensionsViewController.swift */,
+			);
+			path = ExtensionsAndClases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD084B72290671500DEFFFF /* ExtensionsViewController.swift in Sources */,
 				1AD084862290629600DEFFFF /* ViewController.swift in Sources */,
+				1A349D7A2291A70A0081A0FC /* Annotations.swift in Sources */,
+				1AD084B52290661700DEFFFF /* generalProperties.swift in Sources */,
+				1AD084B92290678E00DEFFFF /* handlingKeyboardViewController.swift in Sources */,
 				1AD084842290629600DEFFFF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,7 +472,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5N6FW6CZWA;
 				INFOPLIST_FILE = Keyboard_validation_and_requests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dfine.Keyboard-validation-and-requests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,7 +492,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5N6FW6CZWA;
 				INFOPLIST_FILE = Keyboard_validation_and_requests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +502,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dfine.Keyboard-validation-and-requests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
