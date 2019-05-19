@@ -13,3 +13,10 @@ import Foundation
 //this doesn't work in a very low textfield (add textfield height)(this works well)
 //In this moment has no aditional space to move
 
+//TO DO
+/*
+ 
+ - Test goint to another viewController
+ - Integrate elements in keyboard and done button
+ 
+ */
