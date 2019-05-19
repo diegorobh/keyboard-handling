@@ -25,8 +25,12 @@ extension UIViewController{
         OperationQueue.main.addOperation {
             textFieldArg.endEditing(true) //probably unnecessary
             let nextTag = textFieldArg.tag + 1
-            if let nextResponder = textFieldArg.superview?.viewWithTag(nextTag) {
-                nextResponder.becomeFirstResponder()
+            if ((textFieldArg.superview?.viewWithTag(nextTag)) != nil){
+                let nextResponder = textFieldArg.superview?.viewWithTag(nextTag)
+                nextResponder?.becomeFirstResponder()
+            }else if ((textFieldArg.superview?.superview?.viewWithTag(nextTag)) != nil){
+                let nextResponder = textFieldArg.superview?.superview?.viewWithTag(nextTag)
+                nextResponder!.becomeFirstResponder()
             }else{
                 textFieldArg.resignFirstResponder()
             }
@@ -34,7 +38,7 @@ extension UIViewController{
     }
     //Moving textFields on keyboard shows and hides
     //enviar viewContainer, activeField, Moved, IntroFields (Moved e IntroFields are inout vars defined in the viewController)
-    func keyboardDidShow(notification:NSNotification, viewContainer:UIStackView, activeField:UITextField?, Moved: inout Bool, IntroFields: inout Bool) {
+    /*func keyboardDidShow(notification:NSNotification, viewContainer:UIStackView, activeField:UITextField?, Moved: inout Bool, IntroFields: inout Bool) {
         if(activeField != nil){
             let additionalHeights = 0
             let heightTfldConstraint = 74 //teniendo en cuenta los espaciados
@@ -67,7 +71,7 @@ extension UIViewController{
             }
             IntroFields = false
         }
-    }
+    }*/
 }
 
 
