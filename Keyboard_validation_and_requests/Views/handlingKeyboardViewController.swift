@@ -21,16 +21,21 @@ class handlingKeyboardViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var seisTfld: UITextField!
     @IBOutlet weak var sieteTfld: UITextField!
     @IBOutlet weak var ochoTfd: UITextField!
+    @IBOutlet weak var nueveTfd: UITextField!
     //******************END LAYOUT ELEMENTS*******************
     //******************SCOPE VARS****************************
-     weak var activeField: UITextField?
-    var Moved: Bool = false
-    var IntroFields: Bool = false
+    var keyboardTools = KeyboardTools()
+     //weak var activeField: UITextField?
+    //var Moved: Bool = false
+    //var IntroFields: Bool = false
     //******************END SCOPE VARS****************************
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardOnTouch()
         let center: NotificationCenter = NotificationCenter.default;
+        keyboardTools.myViewController = self
+        keyboardTools.viewContainer = self.viewContainer
+        keyboardTools.maxTags = 9
         
         center.addObserver(self, selector:#selector(keyboardDidShow(notification:)), name: UIResponder.keyboardWillShowNotification, object:nil)
         center.addObserver(self, selector:#selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object:nil)
@@ -38,17 +43,21 @@ class handlingKeyboardViewController: UIViewController, UITextFieldDelegate {
     }
     //******************KEYBOARD HANDLING*********************
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        activeField = textField
+        keyboardTools.activeField = textField
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.goToNextTextField(textFieldArg: textField)
         return true
     }
-
     private func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String){
         let _:CGFloat = textField.frame.maxY
     }
-
+    @objc func keyboardDidShow(notification:NSNotification) {
+        keyboardTools.keyboardDidShow(notification: notification)
+    }
+    @objc func keyboardWillHide(notification:NSNotification) {
+        keyboardTools.keyboardWillHide(notification: notification)
+    }
     //******************KEYBOARD HANDLING*********************
     //******************ACTIONS*************************
     @IBAction func acceptBtn(_ sender: Any) {

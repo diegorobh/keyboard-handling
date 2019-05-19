@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A349D7A2291A70A0081A0FC /* Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A349D792291A70A0081A0FC /* Annotations.swift */; };
+		1A349D7C2291FF830081A0FC /* KeyboardTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A349D7B2291FF830081A0FC /* KeyboardTools.swift */; };
 		1AD084842290629600DEFFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD084832290629600DEFFFF /* AppDelegate.swift */; };
 		1AD084862290629600DEFFFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD084852290629600DEFFFF /* ViewController.swift */; };
 		1AD084892290629600DEFFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AD084872290629600DEFFFF /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		1A349D792291A70A0081A0FC /* Annotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotations.swift; sourceTree = "<group>"; };
+		1A349D7B2291FF830081A0FC /* KeyboardTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTools.swift; sourceTree = "<group>"; };
 		1AD084802290629600DEFFFF /* Keyboard_validation_and_requests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keyboard_validation_and_requests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD084832290629600DEFFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AD084852290629600DEFFFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				1AD084B62290671500DEFFFF /* ExtensionsViewController.swift */,
+				1A349D7B2291FF830081A0FC /* KeyboardTools.swift */,
 			);
 			path = ExtensionsAndClases;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				1AD084B72290671500DEFFFF /* ExtensionsViewController.swift in Sources */,
 				1AD084862290629600DEFFFF /* ViewController.swift in Sources */,
 				1A349D7A2291A70A0081A0FC /* Annotations.swift in Sources */,
+				1A349D7C2291FF830081A0FC /* KeyboardTools.swift in Sources */,
 				1AD084B52290661700DEFFFF /* generalProperties.swift in Sources */,
 				1AD084B92290678E00DEFFFF /* handlingKeyboardViewController.swift in Sources */,
 				1AD084842290629600DEFFFF /* AppDelegate.swift in Sources */,

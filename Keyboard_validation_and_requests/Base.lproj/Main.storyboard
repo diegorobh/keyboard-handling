@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eUc-DL-BbQ">
-                                <rect key="frame" x="40" y="-2" width="240" height="484"/>
+                                <rect key="frame" x="40" y="-29.5" width="240" height="539"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Doy-Hg-1Hl">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="40"/>
@@ -132,8 +132,20 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="kIJ-r0-dk2"/>
                                         </connections>
                                     </textField>
+                                    <textField opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="9" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uz3-hI-15U">
+                                        <rect key="frame" x="0.0" y="440" width="240" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Efc-gU-GP5"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Hka-XQ-3Zf"/>
+                                        </connections>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMT-7B-0DW">
-                                        <rect key="frame" x="0.0" y="440" width="240" height="44"/>
+                                        <rect key="frame" x="0.0" y="495" width="240" height="44"/>
                                         <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="hV4-oL-42z"/>
@@ -161,6 +173,7 @@
                         <outlet property="cincoTfd" destination="cFR-Dj-AYY" id="Sha-je-TyS"/>
                         <outlet property="dateTfd" destination="lHY-ab-Ysn" id="9sI-yn-ayc"/>
                         <outlet property="fullNameTfd" destination="Doy-Hg-1Hl" id="4UL-Wb-NVg"/>
+                        <outlet property="nueveTfd" destination="uz3-hI-15U" id="lhG-yv-HlA"/>
                         <outlet property="ochoTfd" destination="wXM-Go-D5I" id="3aD-GO-CAo"/>
                         <outlet property="phoneTfd" destination="4Ay-D0-WTA" id="n1i-Mq-oxD"/>
                         <outlet property="seisTfld" destination="34K-lS-g5Y" id="0tq-Oh-2FI"/>
